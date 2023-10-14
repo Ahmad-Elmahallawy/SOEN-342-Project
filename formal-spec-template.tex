@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes, patterns}
+
+\begin{document}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[node distance=3cm]
+        % Entities
+        \node[rectangle, draw] (entity1) {Registry};
+        \node[rectangle, draw, right=of entity1] (entity2) {Sensor};
+        \node[rectangle, draw, below=of entity1] (entity3) {Location};
+        \node[rectangle, draw, below=of entity2] (entity4) {Map};
+
+       
+    \end{tikzpicture}
+    \caption{Domain Model for Sensor System}
+\end{figure}
+\end{document}
