@@ -1,17 +1,34 @@
 \documentclass{article}
 \usepackage{tikz}
+\usepackage{geometry}
 \usetikzlibrary{positioning, shapes, patterns}
+
+% Adjust the page layout with the geometry package
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
 
 \begin{document}
 \begin{figure}
     \centering
     \begin{tikzpicture}[node distance=3cm]
         % Entities
-        \node[rectangle, draw] (entity1) {Registry};
-        \node[rectangle, draw, right=of entity1] (entity2) {Sensor};
-        \node[rectangle, draw, below=of entity1] (entity3) {Location};
-        \node[rectangle, draw, below=of entity2] (entity4) {Map};
-        \node[rectangle, draw, right=of entity2] (entity5) {Temperature};
+        % Registry Entity
+        \node[rectangle, draw] (entity0) {Console};
+        
+        \node[rectangle, draw, below=of entity0] (entity1) {Location Registry};
+        
+        \node[rectangle, draw, right=of entity0] (entity2) {Sensor Registry};
+        
+        % Sensor Entity
+        \node[rectangle, draw, right=of entity2] (entity3) {Sensor};
+        
+        % Location Entity
+        \node[rectangle, draw, below=of entity2] (entity4) {Location};
+        
+        % Map Entity
+        \node[rectangle, draw, below=4cm of entity3] (entity5) {Map};
+        
+        % Temperature Entity
+        \node[rectangle, draw, right=of entity3] (entity6) {Temperature};
 
 
        
