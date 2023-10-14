@@ -12,28 +12,46 @@
     \begin{tikzpicture}[node distance=3cm]
         %---Entities---
         % Console Entity
-        \node[rectangle, draw] (entity0) {Console};
+        \node[rectangle, draw] (console) {Console};
 
         % Location Registry Entity
-        \node[rectangle, draw, below=of entity0] (entity1) {Location Registry};
+        \node[rectangle, draw, below=of console] (lreg) {Location Registry};
 
         % Sensor Registry Entity
-        \node[rectangle, draw, right=of entity0] (entity2) {Sensor Registry};
+        \node[rectangle, draw, right=of console] (sreg) {Sensor Registry};
 
         % Sensor Entity
-        \node[rectangle, draw, right=of entity2] (entity3) {Sensor};
+        \node[rectangle, draw, right=of sreg] (sensor) {Sensor};
 
         % Location Entity
-        \node[rectangle, draw, below=of entity2] (entity4) {Location};
+        \node[rectangle, draw, below=of sreg] (loc) {Location};
 
         % Map Entity
-        \node[rectangle, draw, below=4cm of entity3] (entity5) {Map};
+        \node[rectangle, draw, below=6cm of sensor] (map) {Map Table};
+        
+        % Read Entity
+        \node[rectangle, draw, below right=2cm and 1cm of sensor] (read) {Read Table};
 
         % Temperature Entity
-        \node[rectangle, draw, right=of entity3] (entity6) {Temperature};
+        \node[rectangle, draw, right=4cm of sensor] (temp) {Temperature};
 
-        % Connect Location Registry to Console with an association name
-        \draw[-] (entity1) -- (entity0) node[midway, above] {Association Name};
+        % Connect Console to Location Registry
+        \draw[-] (console) -- (lreg) node[midway, right] {Accesses};
+        % Connect Console to Sensor Registry
+        \draw[-] (console) -- (sreg) node[midway, above] {Accesses};
+        % Connect Sensor Registry to Sensor 
+        \draw[-] (sreg.east) -- (sensor.west) node[midway, above] {Contains};
+        % Connect Sensor to Temperature 
+        \draw[-] (sensor) -- (temp) node[midway, above] {};
+        % Connect Location Registry to Location 
+        \draw[-] (lreg) -- (loc) node[midway, above] {Contains};
+        % Connect Location to Sensor 
+        \draw[-] (loc) -| (sensor) node[midway, xshift=-1cm, yshift=2cm] {};
+         
+        % Dotted line
+        \draw[dashed] (sensor.south) ++(0,-3.25) -- (map.north);
+        
+        \draw[dashed] (sensor.east) ++(2,0) -| (read.north);	
 
     \end{tikzpicture}
     \caption{Domain Model for Sensor System}

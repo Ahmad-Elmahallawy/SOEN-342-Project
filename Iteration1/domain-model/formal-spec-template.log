@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.14)  14 OCT 2023 17:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.14)  14 OCT 2023 18:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,6 +557,11 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+
+Overfull \hbox (21.29378pt too wide) in paragraph at lines 56--57
+ [][] 
+ []
+
 [1{C:/Users/Vanessa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (formal-spec-template.aux)
  ***********
@@ -565,16 +570,16 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14366 strings out of 475248
- 318880 string characters out of 5756868
- 1921785 words of memory out of 5000000
- 35665 multiletter control sequences out of 15000+600000
+ 14374 strings out of 475248
+ 318875 string characters out of 5756868
+ 1923785 words of memory out of 5000000
+ 35673 multiletter control sequences out of 15000+600000
  558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,8n,107p,424b,671s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,8n,107p,424b,685s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Vanessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmr10.pfb>
-Output written on formal-spec-template.pdf (1 page, 18258 bytes).
+Output written on formal-spec-template.pdf (1 page, 18601 bytes).
 PDF statistics:
  14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
