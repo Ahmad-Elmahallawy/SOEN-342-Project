@@ -10,29 +10,32 @@
 \begin{figure}
     \centering
     \begin{tikzpicture}[node distance=3cm]
-        % Entities
-        % Registry Entity
+        %---Entities---
+        % Console Entity
         \node[rectangle, draw] (entity0) {Console};
-        
+
+        % Location Registry Entity
         \node[rectangle, draw, below=of entity0] (entity1) {Location Registry};
-        
+
+        % Sensor Registry Entity
         \node[rectangle, draw, right=of entity0] (entity2) {Sensor Registry};
-        
+
         % Sensor Entity
         \node[rectangle, draw, right=of entity2] (entity3) {Sensor};
-        
+
         % Location Entity
         \node[rectangle, draw, below=of entity2] (entity4) {Location};
-        
+
         % Map Entity
         \node[rectangle, draw, below=4cm of entity3] (entity5) {Map};
-        
+
         % Temperature Entity
         \node[rectangle, draw, right=of entity3] (entity6) {Temperature};
 
+        % Connect Location Registry to Console with an association name
+        \draw[-] (entity1) -- (entity0) node[midway, above] {Association Name};
 
-       
     \end{tikzpicture}
-    \caption{Domain Model for Sensor System (Iteration 1)}
+    \caption{Domain Model for Sensor System}
 \end{figure}
 \end{document}
