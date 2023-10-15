@@ -10,7 +10,8 @@
 \begin{figure}
     \centering
     \begin{tikzpicture}[node distance=3cm]
-        %---Entities---
+        %-----Entities-----
+        
         % Console Entity
         \node[rectangle, draw] (console) {Console};
 
@@ -40,17 +41,21 @@
         
         % Read Table Entity
         \node[rectangle, draw, above left=2cm and 2cm of sensor] (readt) {Read Table};
+        
         % Temperature Entity
         \node[rectangle, draw, right=4cm of sensor] (temp) {Temperature};
         
-        %---Associations and Cardinality---
- 		% Draw a filled black aggregate diamond at the end of the line to Map
+        %-----Associations and Cardinality-----
+        
+ 		% filled aggregate diamond
         \node[diamond, fill=black, anchor=west, minimum size=10pt] at (mapt.east) {};
+        
         % Connect Map Table to Map
         \draw[-] (mapt) -- (map) node[midway, above] {Contains} node[right=0.2cm of mapt, above=0.2cm of mapt.east]{} node[left=0.2cm of map, above]{};
         
         % Connect Read Table to Read
         \node[diamond, fill=black, anchor=west, minimum size=10pt] at (readt.east) {};
+        
         \draw[-] (readt) -- (read) node[midway, above] {Contains} node[right=0.2cm of readt, above=0.2cm of readt.east]{} node[left=0.2cm of read, above]{*};
         
         % Connect Console to Map Table
@@ -65,8 +70,9 @@
         % Connect Console to Sensor Registry
         \draw[-] (console) -- (sreg) node[midway, above] {Accesses}node[right=0.2cm of console,above]{1} node[left=0.2cm of sreg,above]{1};
          
-        % Draw a filled black aggregate diamond at the end of the line to Sensor
+        % filled black aggregate diamond
         \node[diamond, fill=black, anchor=west, minimum size=10pt] at (sreg.east) {};
+        
         % Connect Sensor Registry to Sensor
         \draw[-] (sreg) -- (sensor) node[midway, above] {Contains} node[right=0.2cm of sreg, above]{} node[left=0.2cm of sensor, above]{};
 
@@ -75,6 +81,7 @@
         
         % Connect Location Registry to Location 
         \node[diamond, fill=black, anchor=west, minimum size=10pt] at (lreg.east) {};
+        
          \draw[-] (lreg) -- (loc) node[midway, above] {Contains} node[right=0.2cm of lreg, above=0.2cm of lreg.east]{} node[left=0.2cm of loc, above]{};
 
         % Connect Location to Sensor 
@@ -85,8 +92,9 @@
         \draw[-] (loc) -- (locmap) node[midway, right] {Marked-in};
 
 
-        %---Associative Entities---
+        %-----Associative Entities-----
         \draw[dashed] (sensor.south) ++(0,-3.25) -- (map.north);
+        
         \draw[dashed] (sensor.east) ++(2,0) -| (read.south);	
 
     \end{tikzpicture}
