@@ -79,16 +79,18 @@
         % Connect Sensor to Temperature 
         \draw[-] (sensor) -- (temp) node[midway, above] {} node[right=0.2cm of sensor,above]{*} node[left=0.2cm of temp,above]{1};
         
+        
+        
         % Connect Location Registry to Location 
         \node[diamond, fill=black, anchor=west, minimum size=10pt] at (lreg.east) {};
         
          \draw[-] (lreg) -- (loc) node[midway, above] {Contains} node[right=0.2cm of lreg, above=0.2cm of lreg.east]{} node[left=0.2cm of loc, above]{};
 
         % Connect Location to Sensor 
-        \draw[-] (loc) -| (sensor) node[midway, xshift=-1cm, yshift=2cm] {}node[below=0.2cm of sensor, left]{1} node[right=0.2cm of loc,above]{1};
+        \draw[-] (loc) -| (sensor) node[midway, xshift=-1cm, yshift=2cm] {}node[below=0.2cm of sensor, left]{1} node[below=1.5cm of sensor, right]{Accessed-By}  node[right=0.2cm of loc,above]{1};
         
-        % Add a black triangle next to the line below Sensor
-           \draw[black, fill=black] (sensor.south) ++(0.3,-1) -- ++(0.2,0) -- ++(-0.1,0.2) -- cycle;
+        % Arrow direction between Location and Sensor
+        \draw[black, fill=black] (sensor.south) ++(0.3,-1) -- ++(0.2,0) -- ++(-0.1,0.2) -- cycle;
         
         % Connect Location to Location Map
         \node[diamond, fill=black, anchor=south, minimum size=10pt] at (locmap.north) {};
