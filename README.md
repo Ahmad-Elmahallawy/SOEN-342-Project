@@ -16,6 +16,8 @@ Ahmad will be the team leader for this iteration. He will be responsible for ass
 - Added README.MD, added our information as well as who is going to be the team leader
 - Finished the  Domain Model (You can find the LaTeX code and the pdf containing the diagram  of the domain model by going to Iteration1 folder -> domain-model folder.
 - Below is a screenshot of how the domain model looks like (it is the same image that is in the pdf and when you run LaTeX:
-![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/84809147/bd99935a-4bab-4fae-8917-1a418a2a8df6)
+  
+![domain-model-screenshot](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/90293133/e5cc09fc-8bc8-4870-ac3d-a6d44995c6f7)
+
 
 
