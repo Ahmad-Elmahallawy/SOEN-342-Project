@@ -25,7 +25,10 @@
 
         % Location Entity
         \node[rectangle, draw, below=of sreg] (loc) {Location};
-
+        
+		% Location Map Entity
+        \node[rectangle, draw, below=1.5cm of loc] (locmap) {Location Map};
+        
         % Map Entity
         \node[rectangle, draw, below=6cm of sensor] (map) {Map};
         
@@ -76,7 +79,12 @@
 
         % Connect Location to Sensor 
         \draw[-] (loc) -| (sensor) node[midway, xshift=-1cm, yshift=2cm] {}node[below=0.2cm of sensor, left]{1} node[right=0.2cm of loc,above]{1};
-         
+        
+        % Connect Location to Location Map
+        \node[diamond, fill=black, anchor=south, minimum size=10pt] at (locmap.north) {};
+        \draw[-] (loc) -- (locmap) node[midway, right] {Marked-in};
+
+
         %---Associative Entities---
         \draw[dashed] (sensor.south) ++(0,-3.25) -- (map.north);
         \draw[dashed] (sensor.east) ++(2,0) -| (read.south);	
