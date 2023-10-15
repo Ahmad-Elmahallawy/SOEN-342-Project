@@ -1,10 +1,10 @@
-\documentclass{article}
+\documentclass[landscape]{article}
 \usepackage{tikz}
 \usepackage{geometry}
-\usetikzlibrary{positioning, shapes, patterns}
+\usetikzlibrary{positioning, shapes.geometric, patterns}
 
 % Adjust the page layout with the geometry package
-\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\geometry{left=3cm, right=3cm, top=3cm, bottom=3cm}
 
 \begin{document}
 \begin{figure}
@@ -27,11 +27,23 @@
         \node[rectangle, draw, below=of sreg] (loc) {Location};
 
         % Map Entity
-        \node[rectangle, draw, below=6cm of sensor] (map) {Map Table};
+        \node[rectangle, draw, below=6cm of sensor] (map) {Map};
+        
+        % Map Table Entity
+        \node[rectangle, draw, below=2.5cm of loc] (mapt) {Map Table};
         
         % Read Entity
-        \node[rectangle, draw, below right=2cm and 1cm of sensor] (read) {Read Table};
-
+        \node[rectangle, draw, above right=2cm and 1cm of sensor] (read) {Read};
+        
+        % Read Table Entity
+        \node[rectangle, draw, above left=2cm and 2cm of sensor] (readt) {Read Table};
+        
+        
+ % Draw a filled black aggregate diamond at the end of the line to Map
+        \node[diamond, fill=black, anchor=west, minimum size=10pt] at (mapt.east) {};
+        
+        % Connect Map Table to Map
+        \draw[-] (mapt) -- (map) node[midway, above] {Contains} node[right=0.2cm of mapt, above=0.2cm of mapt.east]{} node[left=0.2cm of map, above]{*};
         % Temperature Entity
         \node[rectangle, draw, right=4cm of sensor] (temp) {Temperature};
         % Connect Console to Location Registry
@@ -39,11 +51,19 @@
         % Connect Console to Sensor Registry
         \draw[-] (console) -- (sreg) node[midway, above] {Accesses}node[right=0.2cm of console,above]{1} node[left=0.2cm of sreg,above]{1};
         % Connect Sensor Registry to Sensor 
-        \draw[-] (sreg.east) -- (sensor.west) node[midway, above] {Contains} node[left=0.2cm of sensor,above]{*} node[right=0.2cm of sreg,above]{1};
+        % Draw a filled black aggregate diamond at the end of the line to Sensor
+        \node[diamond, fill=black, anchor=west, minimum size=10pt] at (sreg.east) {};
+
+        % Connect Sensor Registry to Sensor
+        \draw[-] (sreg) -- (sensor) node[midway, above] {Contains} node[right=0.2cm of sreg, above]{} node[left=0.2cm of sensor, above]{*};
+
         % Connect Sensor to Temperature 
         \draw[-] (sensor) -- (temp) node[midway, above] {} node[right=0.2cm of sensor,above]{*} node[left=0.2cm of temp,above]{1};
         % Connect Location Registry to Location 
-        \draw[-] (lreg) -- (loc) node[midway, above] {Contains}node[right=0.2cm of lreg,above]{1} node[left=0.2cm of loc,above]{*};
+        \node[diamond, fill=black, anchor=west, minimum size=10pt] at (lreg.east) {};
+         \draw[-] (lreg) -- (loc) node[midway, above] {Contains} node[right=0.2cm of lreg, above=0.2cm of lreg.east]{} node[left=0.2cm of loc, above]{*};
+
+
         % Connect Location to Sensor 
         \draw[-] (loc) -| (sensor) node[midway, xshift=-1cm, yshift=2cm] {}node[below=0.2cm of sensor, left]{1} node[right=0.2cm of loc,above]{1};
          
