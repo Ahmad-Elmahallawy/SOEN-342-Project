@@ -3,15 +3,10 @@
 \usetikzlibrary{arrows.meta}
 \usepackage{geometry}
 \usetikzlibrary{positioning, shapes.geometric, patterns}
-
 % Adjust the page layout with the geometry package
-\geometry{left=3cm, right=3cm, top=3cm, bottom=3cm}
-
-
+\geometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
 \begin{document}
 \begin{figure}
-\begin{center}
-
     \centering
     \begin{tikzpicture}[node distance=3cm]
 	% --- Lifelines ---
@@ -47,13 +42,12 @@
   \draw[-{Straight Barb[length=2mm]}] (0, -3.5) -- (map.west) node[midway, above] {m:=[map==null]create(sensor,location)};
   
   \draw[-{Straight Barb[length=2mm]}] (0, -4.75) -- (5, -4.75) node[midway, above] {add(m)};
-  
+
   \draw[-{Straight Barb[length=2mm]}] (0, -6) -- (read.west) node[midway, above] {t:=create(sensor,temperature)};
-  
+
   \draw[-{Straight Barb[length=2mm]}] (0, -7.25) -- (17,-7.25) node[midway, above] {add(t)};
 
 \end{tikzpicture}
     \caption{Interaction Diagram for deploySensor}
-\end{center}
 \end{figure}
 \end{document}
