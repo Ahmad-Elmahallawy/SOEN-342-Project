@@ -1,21 +1,54 @@
-\documentclass[tikz]{article}
-\usepackage{pgf-umlsd}
+\documentclass[landscape]{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{geometry}
+\usetikzlibrary{positioning, shapes.geometric, patterns}
+
+% Adjust the page layout with the geometry package
+\geometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
+
+
 \begin{document}
-    \begin{sequencediagram}
-        \newthread[white]{console}{:Console}
-        \newinst[3]{maptable}{:MapTable} 
-        \newinst[3]{map}{:Map}
-		
-		
-        \begin{call}
-            {console}{findMap(sensor,location)}
-            {maptable}{map}
-        \end{call}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[node distance=3cm]
+	% --- Lifelines ---
+	
+	% Console
+	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (console) {\underline{:Console}};
+  \draw[dashed] (console.south) -- +(0,-10cm);
+  	
+  	% Map Table
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=3cm of console] (maptable) {\underline{:MapTable}};
+  	\draw[dashed] (maptable.south) -- +(0,-10cm);
+  	
+  	% Map
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, below right=2.5cm and 2cm of maptable] (map) {\underline{:Map}};
+  	\draw[dashed] (map.south) -- +(0,-6.5cm);
+  	
+  	% Read
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, below right=1.5cm and 2cm of map] (read) {\underline{:Read}};
+  	\draw[dashed] (read.south) -- +(0,-4cm);
+  	
+  	% Read Table
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=15cm of console] (readtable) {\underline{:ReadTable}};
+  	\draw[dashed] (readtable.south) -- +(0,-10cm);
+	
+	
+  % --- Messages and calls ---
+  \draw[-{Straight Barb[length=2mm]}] (-8, -1) -- (0, -1) node[midway, above] {deploySensor(sensor, location, temperature)};
+  
+  \draw[-{Straight Barb[length=2mm]}] (0, -1.75) -- (5, -1.75) node[midway, above] {findMap(sensor, location)};
+  
+  \draw[dashed, -{Straight Barb[length=2mm]}] (5, -2.5) -- (0, -2.5) node[midway, above] {map};
+  
+  \draw[-{Straight Barb[length=2mm]}] (0, -3.5) -- (map.west) node[midway, above] {m:=[map==null]create(sensor,location)};
+  
+  \draw[-{Straight Barb[length=2mm]}] (0, -4.75) -- (5, -4.75) node[midway, above] {add(m)};
+  
+  \draw[-{Straight Barb[length=2mm]}] (0, -6) -- (read.west) node[midway, above] {t:=create(sensor,temperature)};
 
-        \stepcounter{seqlevel}
-
-        \mess{console}{m:=[map==null]create(sensor,location)}{map}
-
-    \end{sequencediagram}
-
+\end{tikzpicture}
+    \caption{Interaction Diagram for deploySensor}
+\end{figure}
 \end{document}

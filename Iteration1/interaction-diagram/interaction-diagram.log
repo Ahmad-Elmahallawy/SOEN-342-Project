@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.14)  20 OCT 2023 21:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.14)  20 OCT 2023 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -23,11 +23,6 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
-(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/pgf-umlsd\pgf-umlsd.s
-ty
-Package: pgf-umlsd 2011/07/27 v0.6 Some LaTeX macros for UML Sequence Diagrams.
-
-
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tik
 z.sty
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.st
@@ -377,80 +372,94 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz/libraries\tikzlibraryarrows.code.tex
-File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
-braryarrows.code.tex
-File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen193
+braryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen193
+\pgfarrowlength=\dimen194
+\pgfarrowwidth=\dimen195
+\pgfarrowlinewidth=\dimen196
+)
+(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count280
+\Gm@cntv=\count281
+\c@Gm@tempcnt=\count282
+\Gm@bindingoffset=\dimen197
+\Gm@wd@mp=\dimen198
+\Gm@odd@mp=\dimen199
+\Gm@even@mp=\dimen256
+\Gm@layoutwidth=\dimen257
+\Gm@layoutheight=\dimen258
+\Gm@layouthoffset=\dimen259
+\Gm@layoutvoffset=\dimen260
+\Gm@dimlist=\toks30
+
+(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
 ))
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz/libraries\tikzlibraryshadows.code.tex
-File: tikzlibraryshadows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-
+ikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
-ikz/libraries\tikzlibraryfadings.code.tex
-File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ikz/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shape
+s\pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
-braryfadings.code.tex
-File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))
-(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
-\c@preinst=\count280
-\c@instnum=\count281
-\c@threadnum=\count282
-\c@seqlevel=\count283
-\c@callevel=\count284
-\c@callselflevel=\count285
-\c@blocklevel=\count286
-)
+brarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-p
 dftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count287
+\l__color_backend_stack_int=\count283
 \l__pdf_internal_box=\box62
-)
-
-LaTeX Warning: Unused global option(s):
-    [tikz].
-
-(interaction-diagram.aux)
+) (interaction-diagram.aux)
 \openout1 = `interaction-diagram.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count288
-\scratchdimen=\dimen194
+\scratchcounter=\count284
+\scratchdimen=\dimen261
 \scratchbox=\box63
-\nofMPsegments=\count289
-\nofMParguments=\count290
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count291
-\MPscratchDim=\dimen195
-\MPnumerator=\count292
-\makeMPintoPDFobject=\count293
-\everyMPtoPDFconversion=\toks31
+\nofMPsegments=\count285
+\nofMParguments=\count286
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count287
+\MPscratchDim=\dimen262
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
+\everyMPtoPDFconversion=\toks32
 )
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -462,219 +471,69 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 .cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\pgf@layerbox@umlsd@background=\box64
-\pgf@layerboxsaved@umlsd@background=\box65
-\pgf@layerbox@umlsd@threadlayer=\box66
-\pgf@layerboxsaved@umlsd@threadlayer=\box67
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: landscape 
+* h-part:(L,W,R)=(28.45274pt, 738.0645pt, 28.45274pt)
+* v-part:(T,H,B)=(28.45274pt, 557.38951pt, 28.45274pt)
+* \paperwidth=794.96999pt
+* \paperheight=614.295pt
+* \textwidth=738.0645pt
+* \textheight=557.38951pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=144.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
+(Font)              <7> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
+(Font)              <5> on input line 18.
 
+Overfull \hbox (2.507pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
 
-! Package tikz Error: A node must have a (possibly empty) label text.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...:=[map==null]create(sensor,location)}{map}
-                                                  
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
-
-! Use of \pgfutil@next doesn't match its definition.
-\\mess ...e[midway, above] {#3}; \par \node (#3 fr
-                                                  om) at (mess from) {}; \no...
-l.17 ...:=[map==null]create(sensor,location)}{map}
-                                                  
-If you say, e.g., `\def\a1{...}', then you must always
-put `1' after `\a', since control sequence names are
-made up of letters only. The macro here has not been
-followed by the required stuff, so I'm ignoring it.
-
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-! Package tikz Error: A node must have a (possibly empty) label text.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...:=[map==null]create(sensor,location)}{map}
-                                                  
-(That was another \errmessage.)
-
-
-! Package tikz Error: (, +, coordinate, pic, or node expected.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...:=[map==null]create(sensor,location)}{map}
-                                                  
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named `' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...:=[map==null]create(sensor,location)}{map}
-                                                  
-(That was another \errmessage.)
-
-
-! Package pgf Error: No shape named `' is known.
-
-See the pgf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...:=[map==null]create(sensor,location)}{map}
-                                                  
-(That was another \errmessage.)
-
-
-! Package tikz Error: Giving up on this path. Did you forget a semicolon?.
-
-See the tikz package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...:=[map==null]create(sensor,location)}{map}
-                                                  
-(That was another \errmessage.)
-
-Missing character: There is no ) in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-! Extra }, or forgotten \endgroup.
-\endpgfpicture ...globally \endgroup \hss \egroup 
-                                                  \pgf@restore@layerlist@fro...
-l.19     \end{sequencediagram}
-                              
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.19     \end{sequencediagram}
-                              
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Extra }, or forgotten \endgroup.
-\endpgfpicture ...dpicture \endgroup \hss \egroup 
-                                                  \pgfsys@typesetpicturebox ...
-l.19     \end{sequencediagram}
-                              
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.19     \end{sequencediagram}
-                              
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-! LaTeX Error: \begin{tikzpicture} on input line 4 ended by \end{sequencediagra
-m}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19     \end{sequencediagram}
-                              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{sequencediagram} on input line 4 ended by \end{document}.
-
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \end{document}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
+[1{C:/Users/Vanessa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (interaction-diagram.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 4 (\begingroup)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 12741 strings out of 475248
- 274317 string characters out of 5756868
- 1922785 words of memory out of 5000000
- 34080 multiletter control sequences out of 15000+600000
+ 13356 strings out of 475248
+ 285598 string characters out of 5756868
+ 1923785 words of memory out of 5000000
+ 34684 multiletter control sequences out of 15000+600000
  558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,7n,121p,450b,834s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-No pages of output.
-
-pdfTeX warning: pdflatex: dangling objects discarded, no output file produced.
-
+ 102i,8n,107p,430b,703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Vanessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr10.pfb>
+Output written on interaction-diagram.pdf (1 page, 19740 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
+ 14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
