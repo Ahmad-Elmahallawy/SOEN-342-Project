@@ -1,0 +1,21 @@
+\documentclass[tikz]{article}
+\usepackage{pgf-umlsd}
+\begin{document}
+    \begin{sequencediagram}
+        \newthread[white]{console}{:Console}
+        \newinst[3]{maptable}{:MapTable} 
+        \newinst[3]{map}{:Map}
+		
+		
+        \begin{call}
+            {console}{findMap(sensor,location)}
+            {maptable}{map}
+        \end{call}
+
+        \stepcounter{seqlevel}
+
+        \mess{console}{m:=[map==null]create(sensor,location)}{map}
+
+    \end{sequencediagram}
+
+\end{document}

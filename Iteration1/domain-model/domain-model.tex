@@ -23,30 +23,25 @@
         \node[rectangle, draw, right=of console] (sreg) {Sensor Registry};
 
         % Sensor Entity
-        %\node[rectangle, draw, right=of sreg] (sensor) {Sensor};
-        \node[rectangle, draw, right=of sreg, text width=4cm, align=center] (sensor) {
-            Sensor \\
-            \rule{\linewidth}{0.4pt} \\
-            isDeployed: Boolean\\
-        };
+        \node[rectangle, draw, right=of sreg] (sensor) {Sensor};
+        %\node[rectangle, draw, right=of sreg, text width=4cm, align=center] (sensor) {
+            %Sensor \\
+            %\rule{\linewidth}{0.4pt} \\
+            %isDeployed: Boolean\\
+        %};
 
         % Location Entity
         %\node[rectangle, draw, below=of sreg] (loc) {Location};
-        \node[rectangle, draw, below left=3cm and 1cm of sensor, text width=4cm, align=center] (loc) {
-            Location \\
-            \rule{\linewidth}{0.4pt} \\
-            longitude: Real\\
-            latitude: Real
-        };
+        \node[rectangle, draw, below left=4cm and 1cm of sensor] (loc) {Location};
         
 		% Location Map Entity
         \node[rectangle, draw, below=1.5cm of loc] (locmap) {Location Map};
         
         % Map Entity
-        \node[rectangle, draw, below=8cm of sensor] (map) {Map};
+        \node[rectangle, draw, below=8.4cm of sensor] (map) {Map};
         
         % Map Table Entity
-        \node[rectangle, draw, below=3.25cm of loc] (mapt) {Map Table};
+        \node[rectangle, draw, below left=3.9cm and 1cm of loc] (mapt) {Map Table};
         
         % Read Entity
         \node[rectangle, draw, above right=2cm and 1cm of sensor] (read) {Read};
@@ -75,7 +70,7 @@
         \draw[-] (console.west)  -- (-2, 0) -| (-2, -9) -| (mapt.west) node[left=0.2cm of console,above]{1} node[below=8.25cm of console]{Accesses} node[left=0.2cm of mapt,above]{1};
         
         % Connect Console to Read Table
-        \draw[-] (console.north)  -- (0, 3) -| (readt.west) node[above=0.2cm of console,left] {1} node[above=3cm of console, right] {Accesses} node[left=0.2cm of readt,above]{1};
+        \draw[-] (console.north)  -- (0, 2.5) -| (readt.west) node[above=0.2cm of console,left] {1} node[above=2.5cm of console, right] {Accesses} node[left=0.2cm of readt,above]{1};
         
         % Connect Console to Location Registry
         \draw[-] (console) -- (lreg) node[midway, right] {Accesses} node[below=0.2cm of console,left]{1} node[below=2.7cm of console,left]{1};
