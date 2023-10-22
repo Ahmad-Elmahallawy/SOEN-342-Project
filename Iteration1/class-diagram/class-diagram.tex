@@ -105,6 +105,17 @@
             \line(1,0){120} \\
         };
         
+        % Location Map Class
+\node [rectangle, draw, below=2cm of loc, align=center] (locmap) {%
+    \textbf{LocationMap}
+};
+
+\draw[->] (loc) -- (locmap) node[midway, right] {Associates};
+\node at ($(loc)!0.2!(locmap)$) [above, left] {1};
+\node at ($(loc)!0.8!(locmap)$) [above, left] {1};
+
+
+        
         
 \draw[->] (console) -- (readt) node[midway, above] {Captures} node[pos=0.9, below] {1} node[pos=0.1, below] {1};
 
