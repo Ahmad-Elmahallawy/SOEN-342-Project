@@ -1,6 +1,6 @@
 \documentclass[landscape]{article}
 \usepackage{tikz}
-\usetikzlibrary{shapes,arrows,positioning}
+\usetikzlibrary{shapes,arrows,positioning,calc, arrows.meta}
 \usepackage{geometry}
 
 % Adjust the page layout with the geometry package
@@ -105,6 +105,47 @@
             \line(1,0){120} \\
         };
         
+        
+\draw[->] (console) -- (readt) node[midway, above] {Captures} node[pos=0.9, below] {1} node[pos=0.1, below] {1};
+
+        
+        \node[diamond, fill=black, anchor=west, minimum size=10pt] at (readt.east) {};
+\draw[->] (readt.east) -- (read.west) node[midway, above] {Contains} node[pos=0.7, below right] {read};
+
+\draw[-] (sensor) -- (temp) node[midway, above] {} node[pos=0, below right] {*} node[pos=1, below left] {1};
+
+\draw[dotted] (read) -- ($(sensor)!0.5!(temp)$) node[midway, above] {};
+
+        \node[diamond, fill=black, anchor=west, minimum size=10pt] at (sreg.east) {};
+\draw[-] (sreg.east) -- (sensor.west) node[midway, above]{Contains};
+
+
+
+\draw[->] (console.south) -- ++(0,-1) -| (sreg.north)node[pos=0.25, below] {accesses} node[pos=0.0, above left] {1} node[pos=0.7, below right] {1};
+
+
+% Arrow from console to location registry
+\draw[->] (console.south) -- ++(0,-1) -| (lreg.north) node[pos=0.6, below left] {accesses} node[pos=0.0, above left] {1} node[pos=0.9, below right] {1};
+
+
+
+
+
+% Arrow from the bottom left of Console to the top right of MapTable
+% Arrow from Console to MapTable with 90-degree turns around LocationRegistry
+\draw[->] (console.south west) -- ++(0,-1)node[pos=1.5, below left=1cm] {Captures} node[midway, left] {1} -| ([xshift=-1.5cm]mapt.west) node[pos=1, below] {1} -- (mapt.west);
+
+
+        \node[diamond, fill=black, anchor=west, minimum size=10pt] at (lreg.east) {};
+\draw[-] (lreg.east) -- (loc.west) node[midway, above]{Contains};
+
+        \node[diamond, fill=black, anchor=west, minimum size=10pt] at (mapt.east) {};
+\draw[-] (mapt.east) -- (map.west) node[midway, above]{Contains} node[pos=0.9, below right] {map};
+
+\draw[-] (sensor.south) -- ++(0,-1.5cm) -| (loc.north) node[midway, above right=0.2cm and 3cm] {Addressed-By};
+
+        \draw[black, fill=black] (sensor.south) ++(0.3,-1) -- ++(0.2,0) -- ++(-0.1,0.2) -- cycle;
+
         
     \end{tikzpicture}
     \caption{UML Class Diagram for Sensor System}
