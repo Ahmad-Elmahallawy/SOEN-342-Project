@@ -15,8 +15,12 @@
 	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (console) {\underline{:Console}};
   \draw[dashed] (console.south) -- +(0,-10cm);
   	
+  	% Location Registry
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=2.5cm of console] (lreg) {\underline{:LocationRegistry}};
+  	\draw[dashed] (lreg.south) -- +(0,-10cm);
+  	
   	% Map Table
-  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=3cm of console] (maptable) {\underline{:MapTable}};
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=1.5cm of lreg] (maptable) {\underline{:MapTable}};
   	\draw[dashed] (maptable.south) -- +(0,-10cm);
   	
   	% Map
@@ -28,29 +32,33 @@
   	\draw[dashed] (readtable.south) -- +(0,-10cm);
   	
   	% Read Table
-  	  \node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=2cm of readtable] (read) {r \underline{:Read}};
+  	  \node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=1cm of readtable] (read) {r \underline{:Read}};
   	\draw[dashed] (read.south) -- +(0,-10cm);
   	
   	
 	
   % --- Messages and calls ---
-  \draw[-{Straight Barb[length=2mm]}] (-8, -1) -- (0, -1) node[midway, above]{};
+  \draw[-{Straight Barb[length=2mm]}] (-5, -1) -- (0, -1) node[midway, above]{readTemperature(location)};
   
-    \draw[-{Straight Barb[length=2mm]}] (0, -1.75) -- (5, -1.75) node[midway, above] {findMap(location)};
+    \draw[-{Straight Barb[length=2mm]}] (0, -1.75) -- (5, -1.75) node[midway, above] {findCurrentLocation(location)};
     
-  	\draw[dashed, -{Straight Barb[length=2mm]}] (5, -2.5) -- (0, -2.5) node[midway, above] {map};
+  	\draw[dashed, -{Straight Barb[length=2mm]}] (5, -2.5) -- (0, -2.5) node[midway, above] {loc};
   	
-  	\draw[-{Straight Barb[length=2mm]}] (0, -3.25) -- (9, -3.25) node[midway, above] {getSensor()};
+  	\draw[-{Straight Barb[length=2mm]}] (0, -3.25) -- (9, -3.25) node[midway, above] {[loc != null] findCurrentMap(location)};
   	 
-  	\draw[dashed, -{Straight Barb[length=2mm]}] (9, -4) -- (0, -4) node[midway, above] {sen};
+  	\draw[dashed, -{Straight Barb[length=2mm]}] (9, -4) -- (0, -4) node[midway, above] {m};
 
-	\draw[-{Straight Barb[length=2mm]}] (0, -4.75) -- (13, -4.75) node[midway, above] {findRead(sen)};
+	\draw[-{Straight Barb[length=2mm]}] (0, -4.75) -- (13, -4.75) node[midway, above] {getSensor()};
 	
-	\draw[dashed, -{Straight Barb[length=2mm]}] (13, -5.5) -- (0, -5.5) node[midway, above] {r};
+	\draw[dashed, -{Straight Barb[length=2mm]}] (13, -5.5) -- (0, -5.5) node[midway, above] {sensor};
 
-	\draw[-{Straight Barb[length=2mm]}] (0, -6.25) -- (17, -6.25) node[midway, above] {getTemperature()};
+	\draw[-{Straight Barb[length=2mm]}] (0, -6.25) -- (17, -6.25) node[midway, above] {findCurrentRead(sensor)};
 	
-	\draw[dashed, -{Straight Barb[length=2mm]}] (17, -7) -- (0, -7) node[midway, above] {temperature};
+	\draw[dashed, -{Straight Barb[length=2mm]}] (17, -7) -- (0, -7) node[midway, above] {r};
+	
+	\draw[-{Straight Barb[length=2mm]}] (0, -7.75) -- (20, -7.75) node[midway, above] {getTemperature()};
+	
+	\draw[dashed, -{Straight Barb[length=2mm]}] (20, -8.5) -- (0, -8.5) node[midway, above] {temperature};
 
 
 
