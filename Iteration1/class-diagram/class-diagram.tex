@@ -15,86 +15,94 @@
         % Console Class
         \node [rectangle, draw, align=center] (console) {%
             \textbf{Console} \\
-            \line(1,0){120} \\
-            + attribute1: type1 \\
-            + attribute2: type2 \\
-            \line(1,0){100} \\
-            + method1() \\
-            + method2(param: type)
+            \line(1,0){200} \\
+            sensorRegistry: SensorRegistry \\
+            locationRegistry: LocationRegistry \\
+            mapTable: MapTable \\
+            readTable: ReadTable \\
+            \line(1,0){200} \\
+            +deploySensor(Sensor, Location) \\
+            +readTemperature(Sensor, Temperature)
         };
         
         % Location Registry Class
-        \node [rectangle, draw, below=4cm of console, align=center] (lreg) {%
-            \textbf{Location Registry}
+        \node [rectangle, draw, below=5cm of console, align=center] (lreg) {%
+            \textbf{LocationRegistry} \\
+            \line(1,0){150} \\
+            locations: ArrayList<Location> \\
+            \line(1,0){150} \\
+            +findCurrentLocation(Location) \\
+            +addNewLocation(Location)
         };
         
         % Read Table Class
-        \node [rectangle, draw, right=2cm of console, align=center] (readt) {%
-            \textbf{Read Table} \\
-            \line(1,0){120} \\
-            + attribute1: type1 \\
-            + attribute2: type2 \\
-            \line(1,0){100} \\
-            + method1() \\
-            + method2(param: type)
+        \node [rectangle, draw, right=3cm of console, align=center] (readt) {%
+            \textbf{ReadTable} \\
+            \line(1,0){180} \\
+            reads: ArrayList<Read> \\
+            \line(1,0){180} \\
+            + makeNewRead(Sensor, Temperature) \\
+            + findCurrentRead(Sensor)
         };
 		
 		 % Read Class
-        \node [rectangle, draw, right=2cm of readt, align=center] (read) {%
+        \node [rectangle, draw, right=3cm of readt, align=center] (read) {%
             \textbf{Read} \\
             \line(1,0){120} \\
-            + attribute1: type1 \\
-            + attribute2: type2 \\
-            \line(1,0){100} \\
-            + method1() \\
-            + method2(param: type)
+            sensor: Sensor \\
+            temperature: Temperature \\
+            \line(1,0){120} \\
         };
         
          % Sensor Registry Class
-        \node [rectangle, draw, below=2cm of readt, align=center] (sreg) {%
-            \textbf{Sensor Registery} 
-        };
+        \node [rectangle, draw, above right=1cm and 2cm of lreg, align=center] (sreg) {%
+            \textbf{SensorRegistery}\\
+            \line(1,0){130} \\
+            sensors: ArrayList<Sensor> \\
+            \line(1,0){130} \\
+            +isAlreadyDeployed(Sensor)
+        }; 
         
         % Sensor Class
-        \node [rectangle, draw, right=2cm of sreg, align=center] (sensor) {%
-            \textbf{Sensor} 
+        \node [rectangle, draw, right=3cm of sreg, align=center] (sensor) {%
+            \textbf{Sensor} \\
+            \line(1,0){90} \\
+            isDeployed: boolean \\
+            \line(1,0){90} \\
         };
        
        % Temperature Class
-        \node [rectangle, draw, right=2cm of sensor, align=center] (temp) {%
+        \node [rectangle, draw, right=3cm of sensor, align=center] (temp) {%
             \textbf{Temperature} 
         };
         
         % Location Class
-        \node [rectangle, draw, right=2cm of lreg, align=center] (loc) {%
+        \node [rectangle, draw, right=3cm of lreg, align=center] (loc) {%
             \textbf{Location} 
         };
         
         % Location Map Class
-        \node [rectangle, draw, below=2cm of loc, align=center] (locmap) {%
-            \textbf{Location Map} 
-        };
+        %\node [rectangle, draw, below=2cm of loc, align=center] (locmap) {%
+            %\textbf{LocationMap} 
+        %};
         
         % Map Table Class
-        \node [rectangle, draw, below=4cm of lreg, align=center] (mapt) {%
-            \textbf{Map Table}  \\
-            \line(1,0){120} \\
-            + attribute1: type1 \\
-            + attribute2: type2 \\
-            \line(1,0){100} \\
-            + method1() \\
-            + method2(param: type)
+        \node [rectangle, draw, below=3cm of lreg, align=center] (mapt) {%
+            \textbf{MapTable}  \\
+            \line(1,0){140} \\
+            maps: ArrayList<Map> \\
+            \line(1,0){140} \\
+            +makeNewMap(Sensor, Location) \\
+            +findCurrentMap(Location)
         };
         
          % Map Class
-        \node [rectangle, draw, below=6cm of sensor, align=center] (map) {%
+        \node [rectangle, draw, below right=3cm and 8cm of lreg, align=center] (map) {%
             \textbf{Map}  \\
             \line(1,0){120} \\
-            + attribute1: type1 \\
-            + attribute2: type2 \\
-            \line(1,0){100} \\
-            + method1() \\
-            + method2(param: type)
+            sensor: Sensor \\
+            location: Location \\
+            \line(1,0){120} \\
         };
         
         
