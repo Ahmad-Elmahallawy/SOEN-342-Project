@@ -4,11 +4,13 @@
 \usepackage{geometry}
 
 % Adjust the page layout with the geometry package
-\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+\geometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
 
 \begin{document}
 \begin{figure}
     \centering
+    \resizebox{\textwidth}{!}{
+
     \begin{tikzpicture}
     
     	%-----Classes-----
@@ -159,6 +161,7 @@
 
         
     \end{tikzpicture}
+    }
     \caption{UML Class Diagram for Sensor System}
 \end{figure}
 \end{document}
