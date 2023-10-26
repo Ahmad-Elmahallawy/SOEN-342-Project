@@ -2,10 +2,13 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \usepackage{geometry}
+\usepackage{lscape}
+\usepackage{afterpage}
 \usetikzlibrary{positioning, shapes.geometric, patterns}
 % Adjust the page layout with the geometry package
-\geometry{left=0.25cm, right=0.5cm, top=1.5cm, bottom=1.5cm}
+\geometry{left=1cm, right=1cm, top=1.5cm, bottom=1.5cm}
 \begin{document}
+\afterpage{%
 \begin{figure}
     \centering
     \begin{tikzpicture}[node distance=3cm]
@@ -105,14 +108,40 @@ temperature)
 \end{tabular}
 };
 
-  \draw[-{Straight Barb[length=2mm]}] (17.1, -10.75) -- (20.9,-10.75) node[midway, above] {add(t)};
+  \draw[-{Straight Barb[length=2mm]}] (17.1, -11) -- (20.9,-11) node[midway, above] {add(t)};
   
-
-  %\draw[-{Straight Barb[length=2mm]}] (0, -6) -- (read.west) node[midway, above] {t:=create(sensor,temperature)};
-
-  %\draw[-{Straight Barb[length=2mm]}] (0, -7.25) -- (17,-7.25) node[midway, above] {add(t)};
-
+  \draw[-{Straight Barb[length=2mm]}] (0, -11.75) -- (5.7,-11.75) node[midway, above] {[not depl and not cov] setIsDeployed()};
+  
+  \draw[-{Straight Barb[length=2mm]}] (0, -12.5) -- (8.25,-12.5) node[midway, above] {[not depl and not cov] addNewLocation(location)};
+  
+  \draw[-] (8.25, -13.25) -- (30,-13.25) node[midway, above] {l:= create(location)};
+  
+  \draw[-] (8.25, -14) -- (30,-14) node[midway, above] {add(l)};
+  
+  
 \end{tikzpicture}
     \caption{Interaction Diagram for deploySensor}
 \end{figure}
+}
+
+\newpage % Start a new page
+
+\afterpage{%
+\begin{figure}
+
+    \begin{tikzpicture}[node distance=3cm]
+	% --- Lifelines ---
+	% Location
+	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (loc) at (10, -13.25)  {:\underline{Location}};
+  	\draw[dashed] (loc.south) -- +(0,-4cm);
+  
+  
+  	\draw[-{Straight Barb[length=2mm]}] (0, -13.25) -- (loc.west) node[midway, above] {l:= create(location)};
+  
+  	%\draw[-{Straight Barb[length=2mm]}] (0, -14) -- (10,-14) node[midway, above] {add(l)};
+  
+	\end{tikzpicture}
+\end{figure}
+}
+
 \end{document}

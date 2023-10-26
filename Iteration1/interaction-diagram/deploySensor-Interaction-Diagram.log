@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.14)  25 OCT 2023 23:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.14)  26 OCT 2023 00:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -403,6 +403,15 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
 ))
+(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+(C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/tools\afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks31
+\AP@partial=\box62
+\AP@footins=\box63
+)
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
 ikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -427,39 +436,39 @@ File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 dftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count283
-\l__pdf_internal_box=\box62
+\l__pdf_internal_box=\box64
 ) (deploySensor-Interaction-Diagram.aux)
 \openout1 = `deploySensor-Interaction-Diagram.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
 
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count284
 \scratchdimen=\dimen261
-\scratchbox=\box63
+\scratchbox=\box65
 \nofMPsegments=\count285
 \nofMParguments=\count286
-\everyMPshowfont=\toks31
+\everyMPshowfont=\toks32
 \MPscratchCnt=\count287
 \MPscratchDim=\dimen262
 \MPnumerator=\count288
 \makeMPintoPDFobject=\count289
-\everyMPtoPDFconversion=\toks32
+\everyMPtoPDFconversion=\toks33
 )
 (C:\Users\Vanessa\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -479,14 +488,14 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
-* h-part:(L,W,R)=(7.11317pt, 773.63045pt, 14.22636pt)
+* h-part:(L,W,R)=(28.45274pt, 738.0645pt, 28.45274pt)
 * v-part:(T,H,B)=(42.67912pt, 528.93675pt, 42.67912pt)
 * \paperwidth=794.96999pt
 * \paperheight=614.295pt
-* \textwidth=773.63045pt
+* \textwidth=738.0645pt
 * \textheight=528.93675pt
-* \oddsidemargin=-65.15681pt
-* \evensidemargin=-65.15681pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
 * \topmargin=-66.59087pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -506,10 +515,15 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 15.
+(Font)              <7> on input line 147.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 15.
-[1{C:/Users/Vanessa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(Font)              <5> on input line 147.
+
+Overfull \hbox (229.72878pt too wide) in paragraph at lines 147--147
+ [][] 
+ []
+
+[1{C:/Users/Vanessa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
 (deploySensor-Interaction-Diagram.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
@@ -517,18 +531,18 @@ L3 programming layer <2023-08-29>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 13403 strings out of 475248
- 286515 string characters out of 5756868
- 1930785 words of memory out of 5000000
- 34731 multiletter control sequences out of 15000+600000
+ 13473 strings out of 475248
+ 288045 string characters out of 5756868
+ 1932785 words of memory out of 5000000
+ 34794 multiletter control sequences out of 15000+600000
  558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,10n,107p,443b,703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,10n,107p,443b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Vanessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmr10.pfb>
-Output written on deploySensor-Interaction-Diagram.pdf (1 page, 21927 bytes).
+Output written on deploySensor-Interaction-Diagram.pdf (2 pages, 23166 bytes).
 PDF statistics:
- 14 PDF objects out of 1000 (max. 8388607)
+ 17 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
