@@ -20,13 +20,15 @@ Ahmad will be the team leader for this iteration. He will be responsible for ass
 ![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/93838227/1d19baf7-42ff-4252-aebd-9d6f836c62d6)
 
 - Created two interaction diagrams named ```deploySensor-Interaction-Diagram``` and ```readTemperature-Interaction-Diagram``` respectfully. These diagrams can be found by navigating to ```Iteration1 -> interaction-diagram```
-- Below is a screenshot of how ```deploySensor-Interaction-Diagram``` looks like
+- Below are the screenshots of how ```deploySensor-Interaction-Diagram``` looks like (it was too big to fit on one page)
 
-![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/93838227/8633f33a-a0c6-4639-b11f-10624c87aa1a)
+![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/93838227/2ba5821c-b4d6-4cae-9135-e9e844d6a667) ![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/93838227/91edb011-c5df-4cc7-bc69-6ebebaf3a67a)
+
+
 
 - Below is a screenshot of how ```readTemperature-Interaction-Diagram``` looks like
 
-![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/93838227/03e9b7fd-2909-4ddf-9016-c10cab9ac7ea)
+![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/93838227/7cdb897e-c377-49bd-b3a6-71d31258c247)
 
 - Created the Class Diagram for the system that is named ```class-diagram``` and can be found by navigating to ```Iteration1 -> class-diagram```
 - Below is a screenshot of how ```class-diagram``` looks like
