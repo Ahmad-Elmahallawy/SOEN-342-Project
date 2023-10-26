@@ -6,7 +6,7 @@
 \usepackage{afterpage}
 \usetikzlibrary{positioning, shapes.geometric, patterns}
 % Adjust the page layout with the geometry package
-\geometry{left=1cm, right=1cm, top=1.5cm, bottom=1.5cm}
+\geometry{left=0.5cm, right=0.5cm, top=1.5cm, bottom=1.5cm}
 \begin{document}
 \afterpage{%
 \begin{figure}
@@ -46,9 +46,21 @@
   	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=1.75cm of mapt] (mapl) {:\underline{Map}};
   	\draw[dashed] (mapl.south) -- +(0,-15cm);
   	
+  		%creating a collection figure
+  		\draw (14,0.5) -- (14, 0.7);
+  		\draw (14, 0.7) -- (16,0.7);
+  		\draw (16,0.7) -- (16,-0.2);
+  		\draw (16,-0.2) -- (15.8,-0.2);
+  	
   	% Read Table
   	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=0.3cm of mapl] (readt) {\underline{:ReadTable}};
   	\draw[dashed] (readt.south) -- +(0,-15cm);
+  	
+  	%creating a collection figure
+  		\draw (20.1,0.5) -- (20.1, 0.7);
+  		\draw (20.1, 0.7) -- (22.1,0.7);
+  		\draw (22.1,0.7) -- (22.1,-0.2);
+  		\draw (22.1,-0.2) -- (21.9,-0.2);
   	
   	% Read
   	\node[rectangle, draw, minimum width=1.5cm, minimum height=1cm, align=center, below right=8.75cm and 0.95cm of readt] (read) {\underline{:Read}};
@@ -139,7 +151,19 @@ temperature)
   	\draw[-{Straight Barb[length=2mm]}] (0, -13.25) -- (loc.west) node[midway, above] {l:= create(location)};
   
   	%\draw[-{Straight Barb[length=2mm]}] (0, -14) -- (10,-14) node[midway, above] {add(l)};
+  	
   
+  	 %Location List 
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (loclist) at (12, 0)  {:\underline{Location}};
+  	\draw[dashed] (loclist.south) -- +(0,-17.3cm);
+  	
+  	
+  		%creating a collection figure
+  		\draw (11.2,0.5) -- (11.2, 0.7);
+  		\draw (11.2, 0.7) -- (13.2,0.7);
+  		\draw (13.2,0.7) -- (13.2,-0.2);
+  		\draw (13.2,-0.2) -- (13,-0.2); 
+  	
 	\end{tikzpicture}
 \end{figure}
 }
