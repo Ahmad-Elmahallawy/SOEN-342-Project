@@ -4,7 +4,7 @@
 \usepackage{geometry}
 \usetikzlibrary{positioning, shapes.geometric, patterns}
 % Adjust the page layout with the geometry package
-\geometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
+\geometry{left=0.25cm, right=0.5cm, top=1.5cm, bottom=1.5cm}
 \begin{document}
 \begin{figure}
     \centering
@@ -12,40 +12,105 @@
 	% --- Lifelines ---
 	
 	% Console
-	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (console) {\underline{:Console}};
-  \draw[dashed] (console.south) -- +(0,-10cm);
+	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (console) {:\underline{Console}};
+  \draw[dashed] (console.south) -- +(0,-15cm);
+  
+  	% Sensor Registry
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=1cm of console] (sreg) {:\underline{SensorRegistry}};
+  	\draw[dashed] (sreg.south) -- +(0,-15cm);
+  	
+  	% Sensor
+  	\node[rectangle, draw, minimum width=1.5cm, minimum height=1cm, align=center, right=0.3cm of sreg] (sensor) {s:\underline{Sensor}};
+  	\draw[dashed] (sensor.south) -- +(0,-15cm);
+  	
+  	% Location Registry
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=0.3cm of sensor] (lreg) {:\underline{LocationRegistry}};
+  	\draw[dashed] (lreg.south) -- +(0,-15cm);
+  	
+  	% Location
+  	%\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=0.3cm of lreg] (loc) {l:\underline{Location}};
+  	%\draw[dashed] (loc.south) -- +(0,-15cm);
   	
   	% Map Table
-  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=3cm of console] (maptable) {\underline{:MapTable}};
-  	\draw[dashed] (maptable.south) -- +(0,-10cm);
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=0.3cm of lreg] (mapt) {:\underline{MapTable}};
+  	\draw[dashed] (mapt.south) -- +(0,-15cm);
   	
   	% Map
-  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, below right=2.5cm and 2cm of maptable] (map) {\underline{:Map}};
-  	\draw[dashed] (map.south) -- +(0,-6.5cm);
+  	\node[rectangle, draw, minimum width=1.5cm, minimum height=1cm, align=center, below right=6cm and 0.95cm of mapt] (map) {:\underline{Map}};
+  	\draw[dashed] (map.south) -- +(0,-8cm);
   	
-  	% Read
-  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, below right=1.5cm and 2cm of map] (read) {\underline{:Read}};
-  	\draw[dashed] (read.south) -- +(0,-4cm);
+  	% Map List
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=1.75cm of mapt] (mapl) {:\underline{Map}};
+  	\draw[dashed] (mapl.south) -- +(0,-15cm);
   	
   	% Read Table
-  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=15cm of console] (readtable) {\underline{:ReadTable}};
-  	\draw[dashed] (readtable.south) -- +(0,-10cm);
-	
-	
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=0.3cm of mapl] (readt) {\underline{:ReadTable}};
+  	\draw[dashed] (readt.south) -- +(0,-15cm);
+  	
+  	% Read
+  	\node[rectangle, draw, minimum width=1.5cm, minimum height=1cm, align=center, below right=8.75cm and 0.95cm of readt] (read) {\underline{:Read}};
+  	\draw[dashed] (read.south) -- +(0,-5.25cm);
+  	
+  	% Read List
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center, right=1.75cm of readt] (readl) {:\underline{Read}};
+  	\draw[dashed] (readl.south) -- +(0,-15cm);
+  	
   % --- Messages and calls ---
-  \draw[-{Straight Barb[length=2mm]}] (-8, -1) -- (0, -1) node[midway, above] {deploySensor(sensor, location, temperature)};
+  \draw[-{Straight Barb[length=2mm]}] (-4, -1) -- (0, -1) node[midway, above] {%
+\begin{tabular}{l}
+deploySensor( \\
+sensor, \\
+temperature, \\
+location)
+\end{tabular}
+};
+  % Console and Sensor Registry
+  \draw[-{Straight Barb[length=2mm]}] (0, -1.75) -- (3.3, -1.75) node[midway, above] {findSensor(sensor)};
   
-  \draw[-{Straight Barb[length=2mm]}] (0, -1.75) -- (5, -1.75) node[midway, above] {findMap(sensor, location)};
+  \draw[dashed, -{Straight Barb[length=2mm]}] (3.3, -2.5) -- (0, -2.5) node[midway, above] {s};
   
-  \draw[dashed, -{Straight Barb[length=2mm]}] (5, -2.5) -- (0, -2.5) node[midway, above] {map};
+  % Console and Sensor
+  \draw[-{Straight Barb[length=2mm]}] (0, -3.25) -- (5.7, -3.25) node[midway, above] {getIsDeployed()};
   
-  \draw[-{Straight Barb[length=2mm]}] (0, -3.5) -- (map.west) node[midway, above] {m:=[map==null]create(sensor,location)};
+  \draw[dashed, -{Straight Barb[length=2mm]}] (5.7, -4) -- (0, -4) node[midway, above] {depl};
   
-  \draw[-{Straight Barb[length=2mm]}] (0, -4.75) -- (5, -4.75) node[midway, above] {add(m)};
+  % Console and Location Registry
+  \draw[-{Straight Barb[length=2mm]}] (0, -4.75) -- (8.25, -4.75) node[midway, above] {findCurrentLocation(location)};
+  
+  % Location
+  %\draw[-{Straight Barb[length=2mm]}] (8.25, -5.5) -- (11, -5.5) node[midway, above] {contains()};
+  
+  \draw[dashed, -{Straight Barb[length=2mm]}] (8.25, -5.5) -- (0, -5.5) node[midway, above] {cov};
+  
+  % Console, Map Table and Map  
+  \draw[-{Straight Barb[length=2mm]}] (0, -6.25) -- (11, -6.25) node[midway, above] {[not depl and not cov] makeNewMap(sensor,location)};
+  
+  \draw[-{Straight Barb[length=2mm]}] (11, -7) -- (map.west) node[midway, above] {%
+\begin{tabular}{r}
+m:= \\
+create(sensor \\
+location)
+\end{tabular}
+};
 
-  \draw[-{Straight Barb[length=2mm]}] (0, -6) -- (read.west) node[midway, above] {t:=create(sensor,temperature)};
+  \draw[-{Straight Barb[length=2mm]}] (11, -8.25) -- (14.8,-8.25) node[midway, above] {add(m)};
+  
+  \draw[-{Straight Barb[length=2mm]}] (0, -9) -- (17.1, -9) node[midway, above] {[not depl and not cov] makeNewRead(sensor,temperature)};
+  
+  \draw[-{Straight Barb[length=2mm]}] (17.1, -9.75) -- (read.west) node[midway, above] {%
+\begin{tabular}{r}
+r:= \\
+create(sensor \\
+temperature)
+\end{tabular}
+};
 
-  \draw[-{Straight Barb[length=2mm]}] (0, -7.25) -- (17,-7.25) node[midway, above] {add(t)};
+  \draw[-{Straight Barb[length=2mm]}] (17.1, -10.75) -- (20.9,-10.75) node[midway, above] {add(t)};
+  
+
+  %\draw[-{Straight Barb[length=2mm]}] (0, -6) -- (read.west) node[midway, above] {t:=create(sensor,temperature)};
+
+  %\draw[-{Straight Barb[length=2mm]}] (0, -7.25) -- (17,-7.25) node[midway, above] {add(t)};
 
 \end{tikzpicture}
     \caption{Interaction Diagram for deploySensor}
