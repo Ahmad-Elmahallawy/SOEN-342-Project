@@ -3,8 +3,10 @@
 \usetikzlibrary{shapes,arrows,positioning,calc, arrows.meta}
 \usepackage{geometry}
 
+
 % Adjust the page layout with the geometry package
 \geometry{left=1cm, right=1cm, top=1cm, bottom=1cm}
+
 
 \begin{document}
 \begin{figure}
@@ -18,41 +20,42 @@
         \node [rectangle, draw, align=center] (console) {%
             \textbf{Console} \\
             \line(1,0){200} \\
-            sensorRegistry: SensorRegistry \\
-            locationRegistry: LocationRegistry \\
-            mapTable: MapTable \\
-            readTable: ReadTable \\
+            \texttt{sensorRegistry: SensorRegistry} \\
+            \texttt{locationRegistry: LocationRegistry} \\
+            \texttt{mapTable: MapTable} \\
+            \texttt{readTable: ReadTable} \\
             \line(1,0){200} \\
-            +deploySensor(Sensor, Location) \\
-            +readTemperature(Sensor, Temperature)
+            \texttt{+deploySensor(Sensor, Location)} \\
+            \texttt{+readTemperature(Sensor, Temperature)}
         };
         
         % Location Registry Class
-        \node [rectangle, draw, below=5cm of console, align=center] (lreg) {%
-            \textbf{LocationRegistry} \\
-            \line(1,0){150} \\
-            locations: ArrayList<Location> \\
-            \line(1,0){150} \\
-            +findCurrentLocation(Location) \\
-            +addNewLocation(Location)
-        };
-        
+% Location Registry Class
+\node [rectangle, draw, below=5cm of console, align=center, text width=6cm] (lreg) {%
+    \textbf{LocationRegistry} \\
+    \line(1,0){150} \\
+    \texttt{locations: ArrayList<Location>} \\
+    \line(1,0){150} \\
+    \texttt{+findCurrentLocation(Location)} \\
+    \texttt{+addNewLocation(Location)}
+};
+
         % Read Table Class
         \node [rectangle, draw, right=3cm of console, align=center] (readt) {%
             \textbf{ReadTable} \\
             \line(1,0){180} \\
-            reads: ArrayList<Read> \\
+            \texttt{reads: ArrayList<Read>} \\
             \line(1,0){180} \\
-            + makeNewRead(Sensor, Temperature) \\
-            + findCurrentRead(Sensor)
+            \texttt{+makeNewRead(Sensor, Temperature)} \\
+            \texttt{+findCurrentRead(Sensor)}
         };
 		
 		 % Read Class
         \node [rectangle, draw, right=3cm of readt, align=center] (read) {%
             \textbf{Read} \\
             \line(1,0){120} \\
-            sensor: Sensor \\
-            temperature: Temperature \\
+            \texttt{sensor: Sensor} \\
+            \texttt{temperature: Temperature} \\
             \line(1,0){120} \\
         };
         
@@ -60,16 +63,16 @@
         \node [rectangle, draw, above right=1cm and 2cm of lreg, align=center] (sreg) {%
             \textbf{SensorRegistery}\\
             \line(1,0){130} \\
-            sensors: ArrayList<Sensor> \\
+            \texttt{sensors: ArrayList<Sensor>} \\
             \line(1,0){130} \\
-            +isAlreadyDeployed(Sensor)
+            \texttt{+isAlreadyDeployed(Sensor)}
         }; 
         
         % Sensor Class
         \node [rectangle, draw, right=3cm of sreg, align=center] (sensor) {%
             \textbf{Sensor} \\
             \line(1,0){90} \\
-            isDeployed: boolean \\
+            \texttt{isDeployed: boolean} \\
             \line(1,0){90} \\
         };
        
@@ -92,18 +95,18 @@
         \node [rectangle, draw, below=3cm of lreg, align=center] (mapt) {%
             \textbf{MapTable}  \\
             \line(1,0){140} \\
-            maps: ArrayList<Map> \\
+            \texttt{maps: ArrayList<Map>} \\
             \line(1,0){140} \\
-            +makeNewMap(Sensor, Location) \\
-            +findCurrentMap(Location)
+            \texttt{+makeNewMap(Sensor, Location)} \\
+            \texttt{+findCurrentMap(Location)}
         };
         
          % Map Class
         \node [rectangle, draw, below right=3cm and 8cm of lreg, align=center] (map) {%
             \textbf{Map}  \\
             \line(1,0){120} \\
-            sensor: Sensor \\
-            location: Location \\
+            \texttt{sensor: Sensor} \\
+            \texttt{location: Location} \\
             \line(1,0){120} \\
         };
         
@@ -127,7 +130,7 @@
 
 \draw[-] (sensor) -- (temp) node[midway, above] {} node[pos=0, below right] {*} node[pos=1, below left] {1};
 
-\draw[dotted] (read) -- ($(sensor)!0.5!(temp)$) node[midway, above] {};
+\draw[dashed] (read) -- ($(sensor)!0.53!(temp)$) node[midway, above] {};
 
         \node[diamond, fill=black, anchor=west, minimum size=10pt] at (sreg.east) {};
 \draw[-] (sreg.east) -- (sensor.west) node[midway, above]{Contains};
