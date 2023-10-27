@@ -1,4 +1,4 @@
-\documentclass[landscape]{article}
+\documentclass[landscape, a3paper]{article}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta}
 \usepackage{geometry}
@@ -6,7 +6,7 @@
 \usepackage{afterpage}
 \usetikzlibrary{positioning, shapes.geometric, patterns}
 % Adjust the page layout with the geometry package
-\geometry{left=0.5cm, right=0.5cm, top=1.5cm, bottom=1.5cm}
+\geometry{left=2.5cm, right=2.5cm, top=1.5cm, bottom=1.5cm}
 \begin{document}
 \afterpage{%
 \begin{figure}
@@ -126,9 +126,25 @@ temperature)
   
   \draw[-{Straight Barb[length=2mm]}] (0, -12.5) -- (8.25,-12.5) node[midway, above] {[not depl and not cov] addNewLocation(location)};
   
-  \draw[-] (8.25, -13.25) -- (30,-13.25) node[midway, above] {l:= create(location)};
+  	% Location
+	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (loc) at (31, -13.25)  {:\underline{Location}};
+  	\draw[dashed] (loc.south) -- +(0,-4cm);
   
-  \draw[-] (8.25, -14) -- (30,-14) node[midway, above] {add(l)};
+  
+  \draw[-{Straight Barb[length=2mm]}] (8.25, -13.25) -- (30,-13.25) node[midway, above] {l:= create(location)};
+  
+    	 %Location List 
+  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (loclist) at (33, 0)  {:\underline{Location}};
+  	\draw[dashed] (loclist.south) -- +(0,-17.3cm);
+  	
+  	  		%creating a collection figure
+  	\draw (32.2, 0.5) -- (32.2, 0.7);
+	\draw (32.2, 0.7) -- (34.2, 0.7);  % Adjusted right side
+	\draw (34.2, 0.7) -- (34.2, -0.2);
+	\draw (34.2, -0.2) -- (34.0, -0.2);  % Adjusted left side
+  	
+  
+  \draw[-{Straight Barb[length=2mm]}] (8.25, -14.5) -- (33,-14.5) node[midway, above] {add(l)};
   
   
 \end{tikzpicture}
@@ -136,38 +152,5 @@ temperature)
 \end{figure}
 }
 
-\newpage % Start a new page
-
-\afterpage{%
-\begin{figure}
-
-    \begin{tikzpicture}[node distance=3cm]
-	% --- Lifelines ---
-	% Location
-	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (loc) at (10, -13.25)  {:\underline{Location}};
-  	\draw[dashed] (loc.south) -- +(0,-4cm);
-  
-  
-  	\draw[-{Straight Barb[length=2mm]}] (0, -13.25) -- (loc.west) node[midway, above] {l:= create(location)};
-  
-  	%\draw[-{Straight Barb[length=2mm]}] (0, -14) -- (10,-14) node[midway, above] {add(l)};
-  	
-  
-  	 %Location List 
-  	\node[rectangle, draw, minimum width=2cm, minimum height=1cm, align=center] (loclist) at (12, 0)  {:\underline{Location}};
-  	\draw[dashed] (loclist.south) -- +(0,-17.3cm);
-  	
-  	
-  		%creating a collection figure
-  		\draw (11.2,0.5) -- (11.2, 0.7);
-  		\draw (11.2, 0.7) -- (13.2,0.7);
-  		\draw (13.2,0.7) -- (13.2,-0.2);
-  		\draw (13.2,-0.2) -- (13,-0.2); 
-  		
-  		\draw[-{Straight Barb[length=2mm]}] (0, -14) -- (12,-14) node[midway, above] {add(1)};
-  	
-	\end{tikzpicture}
-\end{figure}
-}
 
 \end{document}

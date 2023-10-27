@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.12)  27 OCT 2023 00:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.12)  27 OCT 2023 00:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -433,7 +433,12 @@ tex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count283
 \l__pdf_internal_box=\box64
-) (deploySensor-Interaction-Diagram.aux)
+)
+
+LaTeX Warning: Unused global option(s):
+    [a3paper].
+
+(deploySensor-Interaction-Diagram.aux)
 \openout1 = `deploySensor-Interaction-Diagram.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -480,18 +485,18 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a3paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
-* h-part:(L,W,R)=(14.22636pt, 766.51726pt, 14.22636pt)
-* v-part:(T,H,B)=(42.67912pt, 528.93675pt, 42.67912pt)
-* \paperwidth=794.96999pt
-* \paperheight=614.295pt
-* \textwidth=766.51726pt
-* \textheight=528.93675pt
-* \oddsidemargin=-58.04362pt
-* \evensidemargin=-58.04362pt
+* h-part:(L,W,R)=(71.13188pt, 1052.75198pt, 71.13188pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=1195.01575pt
+* \paperheight=845.04684pt
+* \textwidth=1052.75198pt
+* \textheight=759.6886pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
 * \topmargin=-66.59087pt
 * \headheight=12.0pt
 * \headsep=25.0pt
@@ -511,15 +516,15 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 173.
+(Font)              <7> on input line 156.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 173.
+(Font)              <5> on input line 156.
 
-Overfull \hbox (201.27602pt too wide) in paragraph at lines 173--173
+Overfull \hbox (34.54272pt too wide) in paragraph at lines 156--156
  [][] 
  []
 
-[1{C:/Users/ahmad/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+[1{C:/Users/ahmad/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 (deploySensor-Interaction-Diagram.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
@@ -528,17 +533,17 @@ L3 programming layer <2023-08-29>
  ) 
 Here is how much of TeX's memory you used:
  13481 strings out of 475248
- 287870 string characters out of 5757812
- 1933785 words of memory out of 5000000
+ 287874 string characters out of 5757812
+ 1932785 words of memory out of 5000000
  34802 multiletter control sequences out of 15000+600000
  558069 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,10n,107p,443b,707s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ahmad/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmr10.pfb>
-Output written on deploySensor-Interaction-Diagram.pdf (2 pages, 23458 bytes).
+Output written on deploySensor-Interaction-Diagram.pdf (1 page, 22523 bytes).
 PDF statistics:
- 17 PDF objects out of 1000 (max. 8388607)
+ 14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
