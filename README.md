@@ -34,4 +34,4 @@ Ahmad will be the team leader for this iteration. He will be responsible for ass
 
 ![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/93838227/66ca78a8-1efd-4cca-8068-3df7e51d0d40)
 
-
+- Created the Implementation of our System using a Console in Java. The Implementation can be viewed by navigating to ```Iteration1 -> Implementation```
