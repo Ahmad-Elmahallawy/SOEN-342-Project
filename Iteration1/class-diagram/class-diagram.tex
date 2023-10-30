@@ -26,7 +26,7 @@
             \texttt{readTable: ReadTable} \\
             \line(1,0){200} \\
             \texttt{+deploySensor(Sensor, Location)} \\
-            \texttt{+readTemperature(Sensor, Temperature)}
+            \texttt{+readTemperature(Location)}
         };
         
         % Location Registry Class
@@ -44,10 +44,10 @@
         \node [rectangle, draw, right=3cm of console, align=center] (readt) {%
             \textbf{ReadTable} \\
             \line(1,0){180} \\
-            \texttt{reads: ArrayList<Read>} \\
+            \texttt{reads: HashMap<Sensor, Temperature>} \\
             \line(1,0){180} \\
             \texttt{+makeNewRead(Sensor, Temperature)} \\
-            \texttt{+findCurrentRead(Sensor)}
+            \texttt{+findTemperature(Sensor)}
         };
 		
 		 % Read Class
@@ -95,10 +95,10 @@
         \node [rectangle, draw, below=3cm of lreg, align=center] (mapt) {%
             \textbf{MapTable}  \\
             \line(1,0){140} \\
-            \texttt{maps: ArrayList<Map>} \\
+            \texttt{maps: HashMap<Sensor, Location>} \\
             \line(1,0){140} \\
             \texttt{+makeNewMap(Sensor, Location)} \\
-            \texttt{+findCurrentMap(Location)}
+            \texttt{+findSensor(Location)}
         };
         
          % Map Class
@@ -129,6 +129,7 @@
 \draw[->] (console.south) -- ++(0,-1) -| (sreg.north)node[pos=0.25, below] {accesses} node[pos=0.0, above left] {1} node[pos=0.7, below right] {1};
 
 
+
 % Arrow from console to location registry
 \draw[->] (console.south) -- ++(0,-1) -| (lreg.north) node[pos=0.6, below left] {accesses} node[pos=0.0, above left] {1} node[pos=0.9, below right] {1};
 
@@ -148,6 +149,8 @@
 \draw[-] (mapt.east) -- (map.west) node[midway, above]{Contains} node[pos=0.9, below right] {map};
 
 \draw[-] (sensor.south) -- ++(0,-1.5cm) -| (loc.north) node[midway, above right=0.2cm and 3cm] {Addressed-By};
+
+\draw[dashed] (map.north) -- ++(0,5.15cm);
 
         \draw[black, fill=black] (sensor.south) ++(0.3,-1) -- ++(0.2,0) -- ++(-0.1,0.2) -- cycle;
 
