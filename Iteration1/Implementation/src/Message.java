@@ -9,11 +9,11 @@ public class Message {
         System.out.println("Location already covered");
     }
 
-    public void locationNotCovered() {
+    public static void locationNotCovered() {
         System.out.println("Location not covered");
     }
     
-    public void successMessage()
+    public static void successMessage()
     {
         System.out.println("Ok");
     }

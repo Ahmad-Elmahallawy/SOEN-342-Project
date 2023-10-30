@@ -8,8 +8,8 @@ public class LocationRegistry {
 	}
 	
 	public void addNewLocation(Location location) {
-		Location l = new Location();
-		locations.add(l);
+		// Location l = new Location();
+		locations.add(location);
 	}
 	
 }

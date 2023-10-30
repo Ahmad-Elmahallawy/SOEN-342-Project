@@ -20,6 +20,11 @@ public class Console {
 		// find existing location in registry
 		boolean lac = locationRegistry.findCurrentLocation(location);
 		
+		if (lac)
+			Message.locationAlreadyCovered();
+		if (depl)
+			Message.sensorDeployed();
+
 		if (!(lac || depl)) {
 			// Create new map
 			mapTable.makeNewMap(sensor, location);
@@ -30,6 +35,9 @@ public class Console {
 			sensor.setIsDeployed(true); 
 			// Add location to Location Registry
 			locationRegistry.addNewLocation(location);
+
+			// Success message
+			Message.successMessage();
 			return true;
 		}
 		else
@@ -43,10 +51,14 @@ public class Console {
 		if (lac) {
 			Sensor sensor = mapTable.findSensor(location);
 			Temperature temperature = readTable.findTemperature(sensor);
-			
+
+			// Success message
+			Message.successMessage();
+
 			return temperature;
 		}
 		else
+			Message.locationNotCovered();
 			return null;
 		
 	}

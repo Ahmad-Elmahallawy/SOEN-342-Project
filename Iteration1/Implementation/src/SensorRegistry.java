@@ -8,4 +8,8 @@ public class SensorRegistry {
 		return sensors.get(index);
 	}
 
+	public void addSensor(Sensor sensor) {
+		sensors.add(sensor);
+	}
+
 }

@@ -2,11 +2,11 @@
 public class Sensor {
 	private boolean isDeployed;
 	
-	private Sensor() {
+	public Sensor() {
 		isDeployed = false;
 	}
 	
-	private Sensor(boolean b) {
+	public Sensor(boolean b) {
 		isDeployed = b;
 	}
 		
