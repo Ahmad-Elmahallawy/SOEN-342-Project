@@ -43,6 +43,8 @@ Ahmad will be the team leader for this iteration. He will be responsible for ass
 https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/84809147/37a63f2d-d051-4bcd-ba17-60adc453009d
 
 # ITERATION 2
+## Team Leader
+Clara will be the team leader for this iteration (Iteration 2). He will be responsible for assigning tasks for each team member  in each part of the iteration, schedule team meetings as well as work like the rest of the team/
 
 
 
