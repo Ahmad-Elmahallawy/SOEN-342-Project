@@ -44,7 +44,15 @@ https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/84809147/37a63f2d-d
 
 # ITERATION 2
 ## Team Leader
-Clara will be the team leader for this iteration (Iteration 2). He will be responsible for assigning tasks for each team member  in each part of the iteration, schedule team meetings as well as work like the rest of the team/
+Clara will be the team leader for this iteration (Iteration 2). He will be responsible for assigning tasks for each team member  in each part of the iteration, schedule team meetings as well as work like the rest of the team\
+
+## What's Done So Far?
+- Refined the Domain Model (You can find the LaTeX code and the pdf containing the diagram  of the domain model by going to ```Iteration2 folder -> domain-model``` folder).
+
+  ![image](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/84809147/3811d848-65d7-4013-b660-b2e149a8d8dd)
+
+- Added Formal Specification, section 1.2 of the PDF. (You can find the LaTeX code and the pdf of formal specification by going to ```Iteration2 folder -> formal-specification``` folder.)\
+[formal-spec.pdf](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/files/13261932/formal-spec.pdf)
 
 
 
