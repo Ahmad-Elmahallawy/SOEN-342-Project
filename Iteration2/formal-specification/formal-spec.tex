@@ -172,5 +172,10 @@
 		\[ MoveToNewLocation~\hat{=}~\\
 		~~~(MoveToNewLocationOK \wedge Success)~ \oplus(SensorNotDeployed \vee LocationAlreadyOccupied)\]
 		
+		\[ GetLocation~\hat{=}~\\
+		~~~(GetLocationOK \wedge Success) \oplus SensorNotDeployed \]
+		
+        \[ GetAllLocations~\hat{=}~GetAllLocationsOK\]
+        
 \end{spacing}
 \end{document}
