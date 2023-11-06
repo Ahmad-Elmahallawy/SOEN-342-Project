@@ -1,4 +1,4 @@
-\documentclass[landscape]{article}
+\documentclass[landscape, a3paper]{article}
 \usepackage{tikz}
 \usepackage{geometry}
 \usetikzlibrary{positioning, shapes.geometric, patterns,shapes,arrows,positioning,calc,arrows.meta}
@@ -44,8 +44,14 @@
         };
 
         % Location Entity
-        \node[rectangle, draw, right=5cm of lreg] (loc) {Location};
-        
+        \node[rectangle, draw, right=5cm of lreg, align=center] (loc) {%
+            \textbf{Location} \\
+            \line(1,0){100} \\
+            \texttt{Longitude: Double} \\
+            \texttt{Latitude: Double}
+        };
+
+
         % Map Table Entity
         \node [rectangle, draw, below=2.5cm of lreg, align=center] (mapt) {%
             \textbf{MapTable}  \\
@@ -76,7 +82,11 @@
         };
         
         % Temperature Entity
-        \node[rectangle, draw, right=2cm of sensor] (temp) {Temperature};
+        \node[rectangle, draw, right=2cm of sensor, align=center] (temp) {%
+            \textbf{Temperature} \\
+            \line(1,0){180} \\
+            \texttt{tempValue: Double}
+        };
         
         
         %-----Associations and Cardinality-----
@@ -128,7 +138,7 @@
    
         %-----Associative Entities-----
         \draw[dashed] (sensor.south) ++(0,-3.25) -- (map.north);
-        \draw[dashed] (read) -- ($(sensor)!0.6!(temp)$) node[midway, above] {};
+        \draw[dashed] (read) -- ($(sensor)!0.4!(temp)$) node[midway, above] {};
 
     \end{tikzpicture}
     \caption{Domain Model for Sensor System}
