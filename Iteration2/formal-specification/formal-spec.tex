@@ -152,6 +152,23 @@
 			response!~=~'Location~already~occupied'
 		\end{schema}
 		
+		\begin{schema}{GetLocationOK}
+            \Xi TempMonitor\\
+            sensor? : SENSOR\_TYPE\\
+            locations! : LOCATION\_TYPE\\
+            \where
+            sensor? \in deployed\\
+            locations! = map(sensor?)
+        \end{schema}
+
+
+        \begin{schema}{GetAllLocationsOK}
+            \Xi TempMonitor\\
+            locations! : LOCATION\_TYPE\\
+            \where
+            locations! \in \ran map
+        \end{schema}
+        
 		\[ MoveToNewLocation~\hat{=}~\\
 		~~~(MoveToNewLocationOK \wedge Success)~ \oplus(SensorNotDeployed \vee LocationAlreadyOccupied)\]
 		
