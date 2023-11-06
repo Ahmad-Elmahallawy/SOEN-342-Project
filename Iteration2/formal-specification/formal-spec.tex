@@ -169,6 +169,19 @@
             locations! \in \ran map
         \end{schema}
         
+        \begin{schema}{UndeploySensorOK}
+            \Delta TempMonitor\\
+            sensor? : SENSOR\_TYPE\\
+            \where
+            sensor? \in deployed\\
+            deployed' = deployed \setminus \{sensor?\}\\
+            map' = \{sensor?\} \dsub map \\
+            read' = \{sensor?\} \dsub read \\
+        \end{schema}
+        
+        \[ UndeploySensor~\hat{=}~\\
+		~~~(UndeployRegisterOK \wedge Success) \oplus SensorNotDeployed \]
+        
 		\[ MoveToNewLocation~\hat{=}~\\
 		~~~(MoveToNewLocationOK \wedge Success)~ \oplus(SensorNotDeployed \vee LocationAlreadyOccupied)\]
 		
@@ -176,6 +189,7 @@
 		~~~(GetLocationOK \wedge Success) \oplus SensorNotDeployed \]
 		
         \[ GetAllLocations~\hat{=}~GetAllLocationsOK\]
+        
         
 \end{spacing}
 \end{document}
