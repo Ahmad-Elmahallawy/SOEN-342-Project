@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.14)  5 NOV 2023 21:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.14)  5 NOV 2023 21:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -838,7 +838,12 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 [1
 
 {C:/Users/Vanessa/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-[3] [4] (formal-spec.aux)
+[3]
+Overfull \hbox (27.42563pt too wide) in alignment at lines 155--156
+[] []
+ []
+
+[4] (formal-spec.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -865,7 +870,7 @@ sa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/U
 sers/Vanessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti1
 2.pfb><C:/Users/Vanessa/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on formal-spec.pdf (4 pages, 112242 bytes).
+Output written on formal-spec.pdf (4 pages, 112368 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  8 named destinations out of 1000 (max. 500000)
