@@ -142,15 +142,6 @@
 			sensor? \notin deployed\\
 			response!~=~'Sensor~not~deployed'\\
 		\end{schema}
-        
-        \begin{schema}{LocationAlreadyOccupied}
-			\Xi TempMonitor\\
-			location? : LOCATION\_TYPE\\
-			response! : MESSAGE
-			\where
-			location? \in \ran map\\
-			response!~=~'Location~already~occupied'
-		\end{schema}
 		
 		\begin{schema}{GetLocationOK}
             \Xi TempMonitor\\
@@ -183,7 +174,7 @@
 		~~~(UndeploySensorOK \wedge Success) \oplus SensorNotDeployed \]
         
 		\[ MoveToNewLocation~\hat{=}~\\
-		~~~(MoveToNewLocationOK \wedge Success)~ \oplus(SensorNotDeployed \vee LocationAlreadyOccupied)\]
+		~~~(MoveToNewLocationOK \wedge Success)~ \oplus(SensorNotDeployed \vee LocationAlreadyCovered)\]
 		
 		\[ GetLocation~\hat{=}~\\
 		~~~(GetLocationOK \wedge Success) \oplus SensorNotDeployed \]
