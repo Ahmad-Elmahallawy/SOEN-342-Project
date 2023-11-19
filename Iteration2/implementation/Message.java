@@ -20,4 +20,8 @@ public class Message {
         System.out.println("Ok");
     }
 
+    public static void nonUniqueSensorID() {
+        System.out.println("Deployed sensor ID is not unique");
+    }
+
 }
