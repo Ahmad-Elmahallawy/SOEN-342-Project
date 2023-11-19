@@ -52,4 +52,8 @@ public class Console {
 		return locationRegistry.getAllLocations();
 	}
 
+	public Location getLocation(double longitude, double latitude) {
+		return locationRegistry.findLocation(longitude, latitude);
+	}
+
 } 
