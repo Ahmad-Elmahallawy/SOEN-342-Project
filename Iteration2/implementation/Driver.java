@@ -161,7 +161,28 @@ public class Driver {
                     Message.successMessage();
                     } 
             }
+	    else if (name.equals("readTemperaturePath")) {
+                while ((line = bufferedReader.readLine()) != null) {
+                    // Process each line as needed
+                    System.out.println("Read from line: " + line);
+                    String[] loc = line.split(",");
 
+                    double longitude = Double.parseDouble(loc[0]);
+                    double latitude = Double.parseDouble(loc[1]);
+
+                    // find existing location in registry
+                    Location location = c.getLocation(longitude, latitude);
+
+                    if (location != null) {
+                        Temperature t = c.readTemperature(location);
+                        System.out.println(t.toString());
+                        // Success message
+                        Message.successMessage();
+                    }
+                    // Error message
+                    Message.locationNotCovered();  
+                }
+            }
             // Close the BufferedReader and FileReader
             bufferedReader.close();
             fileReader.close();
