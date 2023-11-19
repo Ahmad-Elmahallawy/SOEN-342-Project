@@ -64,6 +64,16 @@ public class Console {
 		return sensorRegistry.findSensor(sid);
 	}
 
+	// ----- create objects from the text file ----
+	public void addSensor(int sid) {
+		sensorRegistry.addSensor(sid);
+	}
+
+	public Location addLocation(double longitude, double latitude) {
+		return locationRegistry.addLocation(longitude, latitude);
+	}
+	// ------------------------------------------------
+
 	// ----- get objects to write to the text file -----
 	public ArrayList<DeployedSensor> getAllDeployedSensors() {
 		return sensorRegistry.getAllDeployedSensors();
