@@ -48,4 +48,8 @@ public class Console {
 		mapTable.makeNewMap(sensor, location);
 	}
 
+	public ArrayList<Location> getAllLocations() {
+		return locationRegistry.getAllLocations();
+	}
+
 } 
