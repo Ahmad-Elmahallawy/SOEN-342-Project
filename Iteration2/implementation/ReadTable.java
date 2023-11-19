@@ -18,4 +18,9 @@ public class ReadTable {
 	public Temperature findTemperature(DeployedSensor sensor) {
 		return reads.get(sensor);
 	}
+
+	// ----- get objects to write to the text file -----
+	public HashMap<DeployedSensor, Temperature> getAllReads() {
+		return reads;
+	}
 }
