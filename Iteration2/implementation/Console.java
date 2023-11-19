@@ -40,4 +40,12 @@ public class Console {
 		readTable.removeRead(sensor);
 	}
 
+	public void moveToNewLocation(DeployedSensor sensor, Location location) {
+		// move sensor to new location
+		Location oldLocation = mapTable.findLocation(sensor);
+		mapTable.removeMap(sensor);
+		locationRegistry.removeLocation(oldLocation);
+		mapTable.makeNewMap(sensor, location);
+	}
+
 } 
