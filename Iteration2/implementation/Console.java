@@ -15,4 +15,10 @@ public class Console {
 		this.readTable = readTable;
 	}
 
+	public Temperature readTemperature(Location location) {
+		DeployedSensor sensor = mapTable.findSensor(location);
+		Temperature temperature = readTable.findTemperature(sensor);
+		return temperature;
+	}
+
 } 
