@@ -64,4 +64,13 @@ public class Console {
 		return sensorRegistry.findSensor(sid);
 	}
 
+	// ----- get objects to write to the text file -----
+	public ArrayList<DeployedSensor> getAllDeployedSensors() {
+		return sensorRegistry.getAllDeployedSensors();
+	}
+
+	public ArrayList<Sensor> getAllSensors() {
+		return sensorRegistry.getAllSensors();
+	}
+
 } 
