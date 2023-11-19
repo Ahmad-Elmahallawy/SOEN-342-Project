@@ -31,4 +31,13 @@ public class Console {
 		readTable.makeNewRead(deployed, temperature);
 	}
 
+	public void undeploySensor(DeployedSensor sensor) {
+		// Remove sensor from deployedRegistry
+		sensorRegistry.removeDeployedSensor(sensor);
+		// Remove map
+		mapTable.removeMap(sensor);
+		// Remove read
+		readTable.removeRead(sensor);
+	}
+
 } 
