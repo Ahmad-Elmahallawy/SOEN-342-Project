@@ -56,4 +56,12 @@ public class Console {
 		return locationRegistry.findLocation(longitude, latitude);
 	}
 
+	public DeployedSensor getDeployedSensor(int sid) {
+		return sensorRegistry.findDeployedSensor(sid);
+	}
+
+	public Sensor getSensor(int sid) {
+		return sensorRegistry.findSensor(sid);
+	}
+
 } 
