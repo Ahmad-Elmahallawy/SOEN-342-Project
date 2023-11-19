@@ -83,4 +83,12 @@ public class Console {
 		return sensorRegistry.getAllSensors();
 	}
 
+	public HashMap<DeployedSensor, Location> getAllMaps() {
+		return mapTable.getAllMaps();
+	}
+
+	public HashMap<DeployedSensor, Temperature> getAllReads() {
+		return readTable.getAllReads();
+	}
+
 } 
