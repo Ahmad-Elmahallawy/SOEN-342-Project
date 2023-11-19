@@ -30,4 +30,9 @@ public class MapTable {
 		return maps.get(sensor);
 	}
 
+	// ----- get objects to write to the text file -----
+	public HashMap<DeployedSensor, Location> getAllMaps() {
+		return maps;
+	}
+
 }
