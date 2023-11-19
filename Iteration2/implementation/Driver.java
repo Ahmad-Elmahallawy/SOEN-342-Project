@@ -49,6 +49,30 @@ public class Driver {
         printAllSensors(console.getAllSensors());
 	}
 
+   private static void printAllLocations(PrintWriter pw, ArrayList<Location> locations) {
+        
+        if (locations.size() == 0)
+            pw.println("No Locations in Location Registry");
+        else {
+            for (Location location : locations) {
+                double latitude = location.getLatitude();
+                double longitude = location.getLongitude();
+                pw.println(longitude + ", " + latitude);
+            }
+        }
+    }
+
+    private static void printAllDeployed(PrintWriter pw, ArrayList<DeployedSensor> deployed) {
+        
+        if (deployed.size() == 0)
+            pw.println("No sensors have been deployed");
+        else {
+            for (DeployedSensor sensor : deployed) {
+                pw.println(sensor.toString());
+            }
+        }
+    }
+
 
     private static void printAllSensors(ArrayList<Sensor> sensors) {
         
