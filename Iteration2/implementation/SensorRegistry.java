@@ -36,7 +36,17 @@ public class SensorRegistry {
 		return deployedRegistry.findDeployed(sid);
 	}
 
+	// ----- create objects from the text file -----
+   	 public void addSensor(int sid) {
+      		Sensor sensor = new Sensor(sid);
+		sensors.add(sensor);
+	}
+
 	// ----- get objects to write to the text file ----
+	public ArrayList<Sensor> getAllSensors() {
+		return sensors;
+	}
+
 	public ArrayList<DeployedSensor> getAllDeployedSensors() {
 		return deployedRegistry.getAllDeployed();
 	}
