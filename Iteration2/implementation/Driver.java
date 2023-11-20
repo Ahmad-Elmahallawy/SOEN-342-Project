@@ -232,8 +232,9 @@ public class Driver {
 						// Success message
 						Message.successMessage();
 					}
-					// Error message
-					Message.locationNotCovered();  
+					else
+						// Error message
+						Message.locationNotCovered();  
 				}
 			}
 			else if (name.equals("undeploySensorPath")) {
