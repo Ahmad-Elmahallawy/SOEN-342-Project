@@ -13,7 +13,7 @@
 Ahmad will be the team leader for this iteration. He will be responsible for assigning tasks for each team member  in each part of the iteration, schedule team meetings as well as work like the rest of the team.
 ##
 - All Iteration 1 work can be found in `Iteration1` Folder
-- Functionality Video:
+- Functionality Video for Iteration 1:
 
   https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/84809147/37a63f2d-d051-4bcd-ba17-60adc453009d
 
@@ -51,6 +51,11 @@ OCL can be found here:\
 ### Implementation
 All Implementation Code can be found here:\
 [Iteration2/implementation](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/tree/b7a2f0618cacddf8ea6dea3c1e7d1631f9defa79/Iteration2/implementation)
+
+### Functionality Video for Iteration 2
+https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/assets/84809147/1e854bbf-9df4-4e77-928e-d5fe40aa8b8b
+
+
 
 
 
