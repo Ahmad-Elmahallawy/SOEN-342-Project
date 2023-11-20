@@ -47,6 +47,22 @@ public class Driver {
         	// This to verify that all the sensors have been initialized into objects 
         	// (and verify that the object types reflect if they are sensors or deployed sensors)
         	printAllSensors(console.getAllSensors());
+
+		// -------------- Part 2: undeploy sensors and move some sensors to a new location ---------
+	        // Let's undeploy some sensors
+	        readFromFile(console, "undeploySensorPath", undeploySensorPath);
+	        // Let's move some sensors to new locations
+	        readFromFile(console, "moveToNewLocationPath", moveToNewLocationPath);
+	
+	        // Let's write a file for all the deployed sensors
+	        writeToFile(console, "deployedPath", deployedPath);
+	        // Let's write a file for all the locations 
+	        writeToFile(console, "locationsPath", locationsPath);
+	        // Let's write a file for all the deployed sensor and location pairs
+	        writeToFile(console, "mapTablePath", mapTablePath);
+	        // Let's write a file for all the deployed sensor and location pairs
+	        writeToFile(console, "readTablePath", readTablePath);
+
 	}
 
    	private static void printAllLocations(PrintWriter pw, ArrayList<Location> locations) {
