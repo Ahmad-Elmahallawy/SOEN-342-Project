@@ -84,6 +84,33 @@ public class Driver {
             }
         }
     }
+	private static void printAllMaps(PrintWriter pw, HashMap<DeployedSensor, Location> maps) {
+        
+        if (maps.size() == 0)
+            pw.println("No DeployedSensor-Location pairs in Map Table");
+        else {
+            for (Map.Entry<DeployedSensor, Location> entry : maps.entrySet()) {
+                DeployedSensor sensor = entry.getKey();
+                Location location = entry.getValue();
+
+                pw.println(sensor.toString() + ", " + location.toString());
+            }
+        }
+    }
+
+    private static void printAllReads(PrintWriter pw, HashMap<DeployedSensor, Temperature> reads) {
+        
+        if (reads.size() == 0)
+            pw.println("No DeployedSensor-Location pairs in Map Table");
+        else {
+            for (Map.Entry<DeployedSensor, Temperature> entry : reads.entrySet()) {
+                DeployedSensor sensor = entry.getKey();
+                Temperature temperature = entry.getValue();
+
+                pw.println(sensor.toString() + ", " + temperature.toString());
+            }
+        }
+    }
 
 	    // Method to write to the file
     private static void writeToFile(Console c, String name, String filePath) {
