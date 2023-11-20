@@ -138,8 +138,18 @@ public class Driver {
             		// Create a PrintWriter to write formatted text to the file
             		PrintWriter pw = new PrintWriter(fos);
 
-            		// Insert code here for writing to the file
-
+			if (name.equals("locationsPath")) {
+			                printAllLocations(pw, c.getAllLocations());   
+			            } 
+			            else if (name.equals("deployedPath")) {
+			                printAllDeployed(pw, c.getAllDeployedSensors());   
+			            }
+			            else if (name.equals("mapTablePath")) {
+			                printAllMaps(pw, c.getAllMaps());   
+			            }
+			            else if (name.equals("readTablePath")) {
+			                printAllReads(pw, c.getAllReads());   
+			            }
             		// Close the PrintWriter and FileOutputStream
             		pw.close();
             		fos.close();
