@@ -39,7 +39,7 @@ All System Sequence Diagram can be found here:\
 
 ### Formal Specification
 Formal Specification path can be found here:
-- [Iteration2/formal-specification](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/tree/b7a2f0618cacddf8ea6dea3c1e7d1631f9defa79/Iteration2/system-sequence-diagram)
+- [Iteration2/formal-specification](Iteration2/formal-specification)
 
 PDF for the formal specification:
 - [formal-spec.pdf](https://github.com/Ahmad-Elmahallawy/SOEN-342-Project/files/13405685/formal-spec.2.pdf)
